@@ -2,14 +2,14 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
-import Home from './pages/home/index';
-import Projects from './pages/blueprints/index';
-import Blueprint from './pages/blueprint/index';
-import Scan from './pages/scan/index';
-import Gallery from './pages/gallery/index';
-import GalleryPost from './pages/gallery-post/index';
-import Auth from './pages/auth/index';
-import Profile from './pages/profile/index';
+import Home from './pages/home';
+import Projects from './pages/blueprints';
+import Blueprint from './pages/blueprint';
+import Scan from './pages/scan';
+import Gallery from './pages/gallery';
+import GalleryPost from './pages/gallery-post';
+import Auth from './pages/auth';
+import Profile from './pages/profile';
 
 function App() {
   return (
