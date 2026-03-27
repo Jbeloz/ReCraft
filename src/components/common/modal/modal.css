@@ -1,0 +1,87 @@
+/* =============================================
+   ReCraft — Modal Component
+   ============================================= */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  animation: modal-fade-in 0.15s ease;
+}
+
+@keyframes modal-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modal {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18);
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  animation: modal-slide-up 0.18s ease;
+}
+
+@keyframes modal-slide-up {
+  from { transform: translateY(16px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* Size variants */
+.modal--sm { max-width: 360px; }
+.modal--lg { max-width: 680px; }
+
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 1.8rem 0;
+}
+
+.modal__title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1b1b1b;
+  margin: 0;
+}
+
+.modal__close {
+  background: #f3f4f6;
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #6b7280;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  flex-shrink: 0;
+}
+.modal__close:hover { background: #e5e7eb; color: #1b1b1b; }
+
+.modal__body {
+  padding: 1.2rem 1.8rem 1.8rem;
+  font-size: 0.9rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.modal__footer {
+  padding: 0 1.8rem 1.6rem;
+  display: flex;
+  gap: 0.65rem;
+  justify-content: flex-end;
+}

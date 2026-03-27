@@ -1,0 +1,68 @@
+/* =============================================
+   ReCraft — Input Component
+   ============================================= */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.field__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #374151;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.field__label--required::after {
+  content: ' *';
+  color: #dc2626;
+}
+
+.field__control {
+  padding: 0.65rem 0.85rem;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #111827;
+  background: #fff;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  resize: vertical;
+}
+
+.field__control::placeholder { color: #9ca3af; }
+
+.field__control:focus {
+  border-color: #2d6a4f;
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.1);
+}
+
+.field__control--error {
+  border-color: #f87171;
+}
+.field__control--error:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.field__control:disabled {
+  background: #f3f4f6;
+  color: #9ca3af;
+  cursor: default;
+}
+
+.field__hint {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.1rem;
+}
+
+.field__error {
+  font-size: 0.75rem;
+  color: #dc2626;
+  margin-top: 0.1rem;
+}
